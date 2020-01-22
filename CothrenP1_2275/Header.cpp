@@ -1,3 +1,10 @@
+// A. Noel Cothren
+// acothren1@cnm.edu
+// CIS 2275, Spring 2020
+// Program 1
+
+// Header.cpp
+
 #include "Header.h"
 
 void WriteHeader()

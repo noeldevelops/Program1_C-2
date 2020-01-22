@@ -1,4 +1,11 @@
+// A. Noel Cothren
+// acothren1@cnm.edu
+// CIS 2275, Spring 2020
+// Program 1
 
+// Source.cpp 
+
+#include "header.h"
 
 int main()
 {

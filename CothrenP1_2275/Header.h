@@ -3,16 +3,20 @@
 // CIS 2275, Spring 2020
 // Program 1
 
-// Functions.h 
+// Header.h 
 
-#ifndef FUNCTIONS_H;
-#define FUNCTIONS_H;
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+
 #include <string>
 #include <vector>
 #include <fstream>
+#include <string>
+
+using namespace std;
 
 const int SIZE = 1000;
-const string FILE_IN = “numbers.txt”;
+const string FILE_IN = "numbers.txt";
 void WriteHeader();
 bool ReadFile(int number[], int& total);
 void Sort(int number[], int total);
