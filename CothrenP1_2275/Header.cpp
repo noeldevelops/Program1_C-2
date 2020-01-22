@@ -22,7 +22,7 @@ bool ReadFile(int number[], int& total)
 	}
 	//read in numbers
 	int i{0};
-	while (i < SIZE && !input.eof) 
+	while (i < SIZE && !(input.eof)) 
 	{
 		input >> number[i];
 		i++;
