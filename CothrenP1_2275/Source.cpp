@@ -5,16 +5,42 @@
 
 // Source.cpp 
 
-#include "header.h"
+#include "Header.h"
 
 int main()
 {
 	const int SIZE = 1000;
-	int number{ 0 }, total{ 15 }, count{ 5 };
+	int numbers{ 0 };
+	int total, high, low, rNumModes, rNumTimes = 0;
+	bool fileRead = false;
 	int arr[SIZE];
+	double avg, median;
+	vector<int> modes;
+	string fileName;
 
-	int* sum; //sum is a pointer
-	//to use sum, use *sum, which is dereferencing/indirection operator
+	WriteHeader();
+	fileRead = ReadFile(arr, total); //pass array, total # ints by ref
+	if (!fileRead)
+	{
+		cout << "\n Error! We could not read the file.";
+	}
+	else
+	{
 
-	bool Read(int arr[], int& total); //pass array, total # ints by ref
+		Sort(arr, total);
+		HighLow(arr, total, &high, &low);
+		
+		avg = Average(arr, total);
+		
+		median = Median(arr, total);
+		
+		Mode(arr, total, modes, rNumModes, rNumTimes);
+
+		cout << "\n\n Please enter the name of the output file. It should end in .txt  -->  ";
+		getline(cin, fileName);
+		WriteFile(total, avg, modes, high, low, median, rNumModes, rNumTimes, fileName);
+	}
+
+	cout << "\n Goodbye! Thanks for trying Program 1.";
+	return 0;
 }
